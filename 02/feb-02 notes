@@ -1,0 +1,63 @@
+package abc;
+
+public class func {
+	//without argument without return
+	void add() {
+		int a=90;
+		int b=89;
+		System.out.println(a+b);
+	}
+	//with arguments without return 
+	void mul(int a,int b)
+	{  
+		System.out.println(a*b);
+	}	
+	public static void main(String[] args) {
+		func obj=new func();
+		obj.add();
+		obj.add();
+		obj.mul(2, 10);
+		obj.mul(7,7);	
+	}
+}
+
+
+package abc;
+
+import java.util.Scanner;
+public class keerthi {
+	int add() {
+		int a=10;
+		int b=20;
+		return a+b;
+	}
+	String sub(int c) {
+		
+		System.out.println("c values is");
+		return "hello"+c;		
+	}
+	public static void main(String[] args) {
+	    keerthi obj=new keerthi();
+	    System.out.println(obj.add());
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the c values");
+	    int num=sc.nextInt();
+	    System.out.println(obj.sub(num));
+	}
+}
+
+
+package abc;
+
+public class hi1 {
+	
+	String details(String name,String course) {
+		return name+"  "+course;
+	}
+public static void main(String[] args) {
+	hi1 object=new hi1();
+	System.out.println(object.details("keerthi", "java full stack"));
+	System.out.println(object.details("kalai", "java full stack"));
+	System.out.println(object.details("gokul", "pyhton full stack"));
+}
+}
