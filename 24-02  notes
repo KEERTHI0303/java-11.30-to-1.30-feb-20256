@@ -1,0 +1,121 @@
+package HI;
+
+class ramki{
+	void add() {
+		System.out.println("ramki add");
+	}
+}
+public class bli extends ramki {
+	void add() {
+		super.add();
+		System.out.println("bli add");
+	}
+public static void main(String[] args) {
+	ramki obj=new bli();
+	obj.add();
+}
+}
+//cons
+package HI;
+class demo12{
+	static String name="abc";
+	final String address = "salem";
+	
+	 void add() {
+		 name="xyz";
+		// address="madurai";
+		System.out.println(address+name);
+	}
+	final void sub() {//don't override
+		System.out.println("sub");
+	}
+//	const void mul() {
+//		
+//	}
+}
+public class hihi extends demo12 {
+//	 void sub() {
+//			System.out.println("sub");
+//		}
+public static void main(String[] args) {
+//	add();
+	hihi obj=new hihi();
+	obj.add();
+	obj.sub();
+	
+}
+}
+
+package HI;
+
+class demo{
+	private String course;
+
+	/*void live(String course) {
+		this.course=course;
+	}*/
+	demo(String course){
+		this.course=course;
+	}
+	void wire() {
+		System.out.println(course);
+	}
+}
+public class gh {
+    public static void main(String[] args) {
+		demo obj=new demo("java");
+		obj.wire();
+	}
+}
+
+package HI;
+
+class karthi{
+	public String name="karthi";// within package 
+	protected String phoneno="8989898989";// subclass use
+	private int age=24;//within class
+	void details() {
+		System.out.println(name);
+		System.out.println(phoneno);
+		System.out.println(age);
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+}
+public class n extends karthi{
+	void details23() {
+		System.out.println(name);
+		System.out.println(phoneno);
+		System.out.println(getAge());
+	}
+public static void main(String[] args) {
+	n obj=new n();
+	obj.details();
+	obj.setAge(90);
+	obj.details23();
+}
+}
+
+
+package HI;
+
+public class koko {
+	
+	koko(){
+		System.out.println("normal cons");
+	}
+	koko(koko obj){
+		
+		System.out.println("copy cons");
+	}
+public static void main(String[] args) {
+ koko obj=	new koko();//cons
+	new koko(obj);//copy cons
+}
+}
+
+
