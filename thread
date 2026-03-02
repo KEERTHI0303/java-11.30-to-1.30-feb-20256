@@ -1,0 +1,103 @@
+single thread
+
+package keerthi;
+
+public class ko extends Thread {
+	 public void run() {
+		 System.out.println("normal function");
+	 }
+	
+	
+	 
+	 
+	public static void main(String[] args) {
+		ko obj= new ko();
+//		obj.hello();
+//		obj.run();
+		obj.start();
+		package keerthi;
+
+public class nisha implements Runnable {
+
+	@Override
+	public void run() {
+		System.out.println("hello");
+		
+	}
+ public static void main(String[] args) {
+	 nisha b= new nisha();
+	 Thread ob=new Thread(b);
+	
+	ob.start();
+}
+}
+
+multi thread 
+
+package keerthi;
+
+class t1 extends Thread{
+	public void run() {
+		for(int i=0;i<11; i++) {
+			System.out.println(i);
+		}
+	}
+}
+class t2 extends Thread{
+	public void run() {
+		for(int i=65;i<75; i++) {
+			System.out.println((char)i);
+		}
+}}
+public class mul {
+public static void main(String[] args) {
+	t1 b=new t1();
+	t2 o=new t2();
+	b.start();
+	o.start();
+}
+}
+
+package keerthi;
+
+class hiii extends Thread{
+	public void run() {
+//		System.out.println("gokul 1222");
+//		System.out.println(Thread.MAX_PRIORITY);
+//		System.out.println(Thread.MIN_PRIORITY);
+//		System.out.println(Thread.NORM_PRIORITY);
+//		System.out.println(Thread.currentThread().getPriority());
+//		Thread.currentThread().setPriority(8);
+//		System.out.println(Thread.currentThread().getPriority());
+//		System.out.println(Thread.currentThread().getName());
+//		Thread.currentThread().setName("kalai");
+//		System.out.println(Thread.currentThread().getName());
+		
+//		//Thread.currentThread().isDaemon();
+		   if(Thread.currentThread().isDaemon())//check the daemon thread
+		   {
+			   System.out.println("background thread");
+		   }
+		   else
+		   {
+			   System.out.println("user thread");
+		   }
+	}
+	}
+public class gokul {
+public static void main(String[] args) {
+	hiii obj =new hiii();
+	obj.setDaemon(true);
+	obj.start();
+		
+	}
+
+}
+
+	}
+
+}
+
+using implements
+
+
