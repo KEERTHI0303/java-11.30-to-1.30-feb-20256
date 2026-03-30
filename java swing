@@ -1,0 +1,45 @@
+package batch11;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Frame;
+
+import javax.swing.JFrame;
+import javax.swing.*;
+import javax.swing.JTextArea;
+
+public class Standalone_application {
+public static void main(String[] args) {
+	System.out.println("simple ui/design");
+	JFrame f=new JFrame();
+	f.setSize(1600, 800);
+	f.setVisible(true);
+	f.getContentPane().setBackground(Color.cyan);
+//	f.setBackground(Color.black);
+	f.setLayout(null);
+	System.out.println(f.isVisible());
+	
+	JLabel l= new JLabel("   abc shop");
+	l.setBounds(200, 100, 200, 100);
+	l.setOpaque(true);
+	l.setForeground(Color.white);
+	l.setBackground(Color.BLACK);
+	l.setFont(new Font("TimesNewRoman",Font.BOLD,32));
+    f.add(l);
+    
+    JLabel l1= new JLabel("name");
+	l1.setBounds(300, 300, 100, 100);
+	l1.setOpaque(true);
+	l1.setForeground(Color.white);
+	l1.setBackground(Color.BLACK);
+	l1.setFont(new Font("TimesNewRoman",Font.BOLD,32));
+    f.add(l1);
+    
+    JTextField t=new JTextField();
+    t.setBounds(450, 300, 100, 100);
+    f.add(t);
+    
+	
+	
+}
+}
